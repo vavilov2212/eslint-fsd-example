@@ -5,6 +5,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <div className={styles.ctas}>
+          <a
+            className={styles.secondary}
+            href="/signin"
+          >
+            Sign in
+          </a>
+        </div>
         <Image
           className={styles.logo}
           src="/next.svg"
