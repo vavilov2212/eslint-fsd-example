@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node ./.eslint/eslint-plugin-enforce-foo-bar/enforce-foo-bar.test.js"
   },
   "dependencies": {
     "@mantine/form": "^8.3.1",

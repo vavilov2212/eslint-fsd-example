@@ -1,12 +1,14 @@
 "use client";
 
-import { useSigninForm } from "@/_features/sigin/lib";
+import { useSigninForm } from "@features/sigin/lib/useSigninForm";
 import { SignInUI } from "../components";
 
 const SignIn = () => {
   /* Form state */
   const { form } = useSigninForm();
 
+  const foo = 'baz';
+  
   return (
     <SignInUI
       form={form}

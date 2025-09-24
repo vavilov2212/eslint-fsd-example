@@ -5,6 +5,9 @@ import { Linter } from "eslint";
 import importPlugin from 'eslint-plugin-import';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
+// Import the ESLint plugin locally
+import eslintPluginExample from "./.eslint/eslint-plugin-enforce-foo-bar"; // <---
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -25,9 +28,12 @@ const FS_SEGMENTS_REG = [...FS_SEGMENTS, ...FS_SEGMENTS.map((seg) => `${seg}.*`)
 
 export const nextjsConfigPlugins: Linter.Config['plugins'] = {
   import: importPlugin,
+  example: eslintPluginExample, // <---
 };
 
 const nextjsConfigRules: Linter.Config['rules'] = {
+  "example/enforce-foo-bar": "error", // <---
+
   'import/no-internal-modules': [
     'error',
     {
@@ -84,6 +90,7 @@ const nextjsConfigRules: Linter.Config['rules'] = {
 
 export default defineConfig([
   globalIgnores([
+    "eslint.config.ts",
     "node_modules/**",
     ".next/**",
     "out/**",

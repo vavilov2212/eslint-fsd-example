@@ -1,3 +1,13 @@
+## Custom ESLint Plugin
+
+This project utilizes a custom ESLint plugin, `eslint-plugin-enforce-foo-bar`, to enforce specific code style rules.
+
+An example of this rule in action can be found in [Signin component](src/_pages/signin/ui/views/Signin.tsx), where it generates an error for demonstration purposes.
+
+For more information on creating custom ESLint rules, refer to the official ESLint documentation: [Custom Rule Tutorial](https://eslint.org/docs/latest/extend/custom-rule-tutorial).
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
